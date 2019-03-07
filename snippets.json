@@ -1,0 +1,62 @@
+{
+	"SceneMediator": {
+		"prefix": "osm",
+		"body": [
+            "import { EgretMediatorClass } from '17zy_olympus-r-egret/egret/injector/Injector';",
+            "import SceneMediator from '17zy_olympus-r/engine/scene/SceneMediator';",
+            "",
+            "@EgretMediatorClass('${1:$TM_FILENAME_BASE}', 'skins.${1:$TM_FILENAME_BASE}Skin')",
+            "export default class ${1:$TM_FILENAME_BASE} extends SceneMediator {",
+                "\t$2",
+            "}"
+		],
+		"description": "init a SceneMediator"
+    },
+
+    "Mediator": {
+        "prefix": "om",
+        "body": [
+            "import { EgretMediatorClass } from '17zy_olympus-r-egret/egret/injector/Injector';",
+            "import Mediator from '17zy_olympus-r/engine/mediator/Mediator';",
+            "",
+            "@EgretMediatorClass('${1:$TM_FILENAME_BASE}', 'skins.${1:$TM_FILENAME_BASE}Skin')",
+            "export default class ${1:$TM_FILENAME_BASE} extends Mediator {",
+                "\t$2",
+            "}"
+        ],
+        "description": "init a Mediator"
+    },
+
+    "listAssets": {
+        "prefix": "olsa",
+        "body": [
+            "public listAssets(): string[] {",
+                "\treturn [$0];",
+            "}"
+        ],
+        "description": "init a listAssets"
+    },
+
+    "listInitRequests": {
+        "prefix": "olsi",
+        "body": [
+            "public listInitRequests(): RequestData[] {",
+                "\treturn [$0];",
+            "}"
+        ],
+        "description": "init a listInitRequests"
+    },
+
+    "model": {
+        "prefix": "omod",
+        "body": [
+            "import { ModelClass } from '17zy_olympus-r/engine/injector/Injector';",
+            "",
+            "@ModelClass",
+            "export default class ${1:$TM_FILENAME_BASE} {",
+                "\t$0",
+            "}"
+        ],
+        "description": "init a Model"
+    }
+}
