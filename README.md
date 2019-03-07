@@ -1,65 +1,54 @@
-# olymplus README
+# 17zuoye Olympus Snippets
 
-This is the README for your extension "olymplus". After writing up a brief description, we recommend including the following sections.
+# usage
 
-## Features
+1. osm: init a SceneMediator
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+``` ts
+import { EgretMediatorClass } from '17zy_olympus-r-egret/egret/injector/Injector';
+import SceneMediator from '17zy_olympus-r/engine/scene/SceneMediator';
 
-For example if there is an image subfolder under your extension project workspace:
+@EgretMediatorClass('${filename}', 'skins.${filename}Skin')
+export default class ${filename} extends SceneMediator {
+    
+}
+```
 
-\!\[feature X\]\(images/feature-x.png\)
+2. om: init a Mediator
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+``` ts
+import { EgretMediatorClass } from '17zy_olympus-r-egret/egret/injector/Injector';
+import Mediator from '17zy_olympus-r/engine/mediator/Mediator';
 
-## Requirements
+@EgretMediatorClass('${filename}', 'skins.${filename}Skin')
+export default class ${filename} extends Mediator {
+    
+}
+```
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+3. omd: init a Model
 
-## Extension Settings
+``` ts
+import { ModelClass } from '17zy_olympus-r/engine/injector/Injector';
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+@ModelClass
+export default class ${filenam} {
+    
+}
+```
 
-For example:
+4. olsa: init a listAssets
 
-This extension contributes the following settings:
+``` ts
+public listAssets(): string[] {
+    return [];
+}
+```
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+5. olsi: init a listInitRequests
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+``` ts
+public listInitRequests(): RequestData[] {
+    return [];
+}
+```

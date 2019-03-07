@@ -48,7 +48,7 @@
     },
 
     "model": {
-        "prefix": "omod",
+        "prefix": "omd",
         "body": [
             "import { ModelClass } from '17zy_olympus-r/engine/injector/Injector';",
             "",
