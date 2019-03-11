@@ -14,7 +14,19 @@ export default class ${filename} extends SceneMediator {
 }
 ```
 
-2. om: init a Mediator
+2. opm: init a PanelMediator
+
+``` ts
+import { EgretMediatorClass } from '17zy_olympus-r-egret/egret/injector/Injector';
+import PanelMediator from '17zy_olympus-r/engine/panel/PanelMediator';
+
+@EgretMediatorClass('${filename}', 'skins.${filename}Skin')
+export default class ${filename} extends PanelMediator {
+    
+}
+```
+
+3. om: init a Mediator
 
 ``` ts
 import { EgretMediatorClass } from '17zy_olympus-r-egret/egret/injector/Injector';
@@ -26,7 +38,7 @@ export default class ${filename} extends Mediator {
 }
 ```
 
-3. omd: init a Model
+4. omd: init a Model
 
 ``` ts
 import { ModelClass } from '17zy_olympus-r/engine/injector/Injector';
@@ -37,7 +49,7 @@ export default class ${filenam} {
 }
 ```
 
-4. olsa: init a listAssets
+5. olsa: init a listAssets
 
 ``` ts
 public listAssets(): string[] {
@@ -45,7 +57,7 @@ public listAssets(): string[] {
 }
 ```
 
-5. olsi: init a listInitRequests
+6. olsi: init a listInitRequests
 
 ``` ts
 public listInitRequests(): RequestData[] {

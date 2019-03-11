@@ -13,6 +13,21 @@
 		"description": "init a SceneMediator"
     },
 
+    "PanelMediator": {
+        "prefix": "opm",
+        "body": [
+            "import { EgretMediatorClass } from '17zy_olympus-r-egret/egret/injector/Injector';",
+            "import PanelMediator from '17zy_olympus-r/engine/panel/PanelMediator';",
+            "",
+            "@EgretMediatorClass('${1:$TM_FILENAME_BASE}', 'skins.${1:$TM_FILENAME_BASE}Skin')",
+            "export default class ${1:$TM_FILENAME_BASE} extends PanelMediator {",
+                "\t$2",
+            "}"
+        ],
+        "description": "init a PanelMediator"
+
+    },
+
     "Mediator": {
         "prefix": "om",
         "body": [

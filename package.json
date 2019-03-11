@@ -2,7 +2,7 @@
 	"name": "17zy-olympus-snippets",
 	"displayName": "17zy-olympus-snippets",
 	"description": "17zuoye olympus snippets",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "jackpanyj",
 	"engines": {
 		"vscode": "^1.20.0"
